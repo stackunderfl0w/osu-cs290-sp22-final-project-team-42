@@ -1,0 +1,85 @@
+body {
+	font-family: Roboto, Helvetica, sans-serif;
+	margin: 0;
+	background-color: #242424;
+
+}
+
+a {
+	text-decoration: none;
+}
+.navbar {
+	background-color: #e5511a;
+	font-size: 18px;
+	line-height: 22px;
+	width: 100%;
+	display: inline-block;
+}
+
+.navlist {
+	margin: 0px;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.navitem {
+	float: right;
+	margin: 10px;
+	display: inline-block;
+}
+.site-title {
+	float: left;
+	margin: 0;
+	padding: 10px 20px;
+	font-size: 30px;
+	font-weight: 700;
+	display: inline-block;
+}
+.tagline{
+	float: left;
+	font-size: 15px;
+	margin: 15px 0 0 0;
+}
+.site-title a{
+	color: #000;
+}
+.navlink a {
+	padding: 8px 10px;
+}
+
+.classname{
+	color: #fff;
+}
+.class-view{
+	display: flex;
+	flex-direction: row;
+	width:=100%;
+}
+.left-classview{
+	background-color: #555;
+	margin: 20px;
+	display: inline-block;
+	width: 33%;
+}
+.right-classview{
+	background-color: #555;
+	margin: 20px;
+	display: inline-block;
+	width: 100%;
+}
+.classname{
+	text-align: center;
+}
+.review{
+	background-color: #777;
+	margin: 15px;
+	color: #eee;
+}
+.review-content{
+	padding: 5px;
+}
+.review-title{
+	font-size: 18px;
+	font-weight: 700;
+}
