@@ -95,12 +95,14 @@ a {
 }
 
 .left-classview{
+	border-radius: 10px;
 	background-color: #555;
 	margin: 20px;
 	display: inline-block;
 	width: 33%;
 }
 .right-classview{
+	border-radius: 10px;
 	background-color: #555;
 	margin: 20px;
 	display: inline-block;
@@ -110,6 +112,7 @@ a {
 	text-align: center;
 }
 .review{
+	border-radius: 10px;
 	background-color: #777;
 	margin: 15px;
 	color: #eee;
