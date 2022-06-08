@@ -36,8 +36,8 @@ app.get('/:course', function (req, res, next) {
   if (course in data){
     res.status(200).render("classview", {
       show_navbar: false,
-      title: "cs290",
-      reviews: data
+      title: "CS290",
+      reviews: data[course].reviews
     })
   } else {
     next()
