@@ -12,6 +12,6 @@ templates['review'] = template({"compiler":[8,">= 4.3.0"],"main":function(contai
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":4,"column":6},"end":{"line":4,"column":15}}}) : helper)))
     + "\n    </p>\n    <p class=\"review-text\">\n      "
     + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":7,"column":6},"end":{"line":7,"column":14}}}) : helper)))
-    + "\n    </p>\n  </div>\n</article>";
+    + "\n    </p>\n  </div>\n</article>\n";
 },"useData":true});
 })();

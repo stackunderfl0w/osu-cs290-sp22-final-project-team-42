@@ -1,0 +1,30 @@
+{
+    "CS290": {
+        "name": "Web Development",
+        "description": "A web development class",
+        "reviews": [
+            {
+                "text": "text",
+                "author": "author"
+            },
+            {
+                "text": "text",
+                "author": "author"
+            }
+        ]
+    },
+    "CS261": {
+        "name": "Data Structures",
+        "description": "A data structures class",
+        "reviews": [
+            {
+                "text": "text",
+                "author": "author"
+            },
+            {
+                "text": "text",
+                "author": "author"
+            }
+        ]
+    }
+}

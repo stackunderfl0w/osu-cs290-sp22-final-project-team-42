@@ -1,35 +1,52 @@
 
-var path = require('path');
-var express = require('express');
-var exphbs = require('express-handlebars');
-var fs = require('fs');
+var path = require('path')
+var express = require('express')
+var exphbs = require('express-handlebars')
+var fs = require('fs')
 
-var app = express();
-var port = process.env.PORT || 3000;
+var app = express()
+app.use(express.static('public'))
+app.use(express.json())
+
+var port = process.env.PORT || 3000
+
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-var reviewData = require('./reviewData.json');
+var data = require('./data.json')
 
-var path = require('path');
+const StringDecoder = require('string_decoder').StringDecoder
+const { nextTick } = require('process')
 
-const StringDecoder = require('string_decoder').StringDecoder;
+app.listen(port, function () {
+  console.log("== Server is listening on port", port)
+})
 
 app.get('/', function (req, res) {
   res.status(200).render("classview", {
+    show_navbar: true,
     title: "reviewer",
-    reviews: reviewData
+    reviews: data
   });
+})
 
+app.get('/:course', function (req, res, next) {
+  var course = req.params.course
 
+  if (course in data){
+    res.status(200).render("classview", {
+      show_navbar: false,
+      title: "cs290",
+      reviews: data
+    })
+  } else {
+    next()
+  }
+})
 
-});
-
-app.use(express.static('public'));
-
-app.listen(port, function () {
-  console.log("== Server is listening on port", port);
-});
+app.get('*', function(req, res){
+  res.status(404).render("404");
+})
 
 app.post('/',function(req, res){
   let buffer = "";
@@ -40,9 +57,9 @@ app.post('/',function(req, res){
     buffer += decoder.write(data);
     //console.log(buffer);
     let newObject = JSON.parse(buffer);
-    reviewData.push(newObject);
+    data.push(newObject);
 
-    jstring = JSON.stringify(reviewData);
+    jstring = JSON.stringify(data);
     fs.writeFile('./reviewData.json',jstring, err=>{
       if(err){
         console.log(err);
@@ -50,6 +67,7 @@ app.post('/',function(req, res){
         console.log("Success");
       }
 
-    });
-  });
-});
+    })
+  })
+
+})
