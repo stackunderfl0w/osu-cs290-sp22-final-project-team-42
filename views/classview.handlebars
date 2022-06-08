@@ -5,7 +5,14 @@
   <div class="right-classview">
     <h1 class="classname">Student Reviews</h1>
     <div class="review-container">
-
+      {{#each reviews}}
+        {{> review}}
+      {{/each}}
     </div>
+    <div class="create-review-container">
+      <input  type="text" id="review-title">
+      <textarea id="review-text"></textarea>
+    </div>
+    <button id="create-review-button" onclick="createreview()">Create Review</button>
   </div>
 </div>
