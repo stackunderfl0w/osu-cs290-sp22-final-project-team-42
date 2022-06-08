@@ -23,10 +23,10 @@ app.listen(port, function () {
 })
 
 app.get('/', function (req, res) {
-  res.status(200).render("classview", {
+  res.status(200).render("classlist", {
     show_navbar: true,
     title: "reviewer",
-    reviews: data
+    classes: data
   });
 })
 
