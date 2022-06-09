@@ -1,4 +1,4 @@
-function insertreview(author,text) {
+function insertreview(author, text) {
   var context = { author: author, text: text };
   var review = Handlebars.templates.review(context);
   var container = document.getElementsByClassName("review-container");
@@ -12,19 +12,17 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function createreview(){
 
-  var review_text = document.getElementById("review-text").value;
-  var review_author = document.getElementById("review-author").value;
+  var review_text = document.getElementById("review-text").value
+  var review_author = document.getElementById("review-author").value
 
   if(review_text == "" || review_author == ""){
-    alert("please dont leave a text field empty");
+    alert("please dont leave a text field empty")
   }else{
-    insertreview(review_author, review_text);
-    document.getElementById("review-text").value = "";
-    document.getElementById("review-author").value = "";
+    insertreview(review_author, review_text)
+    document.getElementById("review-text").value = ""
+    document.getElementById("review-author").value = ""
 
-
-
-    loadServer(review_author, review_text);
+    loadServer(review_author, review_text)
 
     //const newReview = {
       //title: "The title of the review",
@@ -45,8 +43,9 @@ function createreview(){
 
 }
 
-function loadServer(title ,text){
-  payload = { title : title,
+function loadServer(author ,text, ){
+  console.log("TEST")
+  payload = { author : author,
               text : text };
 
   let xhr = new XMLHttpRequest();

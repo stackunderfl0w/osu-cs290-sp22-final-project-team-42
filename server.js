@@ -57,10 +57,10 @@ app.post('/',function(req, res){
     buffer += decoder.write(data);
     //console.log(buffer);
     let newObject = JSON.parse(buffer);
-    data.push(newObject);
+    data["CS290"].reviews.push(newObject);
 
     jstring = JSON.stringify(data);
-    fs.writeFile('./reviewData.json',jstring, err=>{
+    fs.writeFile('./data.json', jstring, err=>{
       if(err){
         console.log(err);
       }else{
