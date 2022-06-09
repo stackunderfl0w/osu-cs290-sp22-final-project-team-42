@@ -1,5 +1,5 @@
-function insertreview(title,text) {
-  var context = { title: title, text: text };
+function insertreview(author,text) {
+  var context = { author: author, text: text };
   var review = Handlebars.templates.review(context);
   var container = document.getElementsByClassName("review-container");
   container[0].insertAdjacentHTML("beforeend", review);
@@ -13,18 +13,18 @@ window.addEventListener('DOMContentLoaded', function () {
 function createreview(){
 
   var review_text = document.getElementById("review-text").value;
-  var review_title = document.getElementById("review-title").value;
+  var review_author = document.getElementById("review-author").value;
 
-  if(review_text == "" || review_title == ""){
+  if(review_text == "" || review_author == ""){
     alert("please dont leave a text field empty");
   }else{
-    insertreview(review_title, review_text);
+    insertreview(review_author, review_text);
     document.getElementById("review-text").value = "";
-    document.getElementById("review-title").value = "";
+    document.getElementById("review-author").value = "";
 
 
 
-    loadServer(review_title, review_text);
+    loadServer(review_author, review_text);
 
     //const newReview = {
       //title: "The title of the review",
