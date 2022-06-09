@@ -2,7 +2,7 @@
     "CS290": {
         "id": "CS 290",
         "name": "Web Development",
-        "description": "A web development class",
+        "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
         "reviews": [
             {
                 "text": "text",
@@ -17,7 +17,18 @@
     "CS261": {
         "id": "CS 261",
         "name": "Data Structures",
-        "description": "A data structures class",
+        "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
+        "reviews": [
+            {
+                "text": "text",
+                "author": "author"
+            }
+        ]
+    },
+    "CS325": {
+        "id": "CS 325",
+        "name": "Analysis of Algorithms",
+        "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
         "reviews": [
             {
                 "text": "text",

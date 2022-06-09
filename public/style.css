@@ -118,13 +118,17 @@ a {
 	color: #eee;
 }
 .review-content{
-	padding: 5px;
+	padding: 1px 10px;
 }
 .review-title{
-	font-size: 18px;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 900;
 }
 
+.review-headline{
+	font-weight: 700;
+	font-size: 18px;
+}
 
 #create-review-button{
 	position: relative;
@@ -132,4 +136,9 @@ a {
 	width: 100px;
 	height: 50px;
 	margin: 10px;
+}
+
+#errpage {
+	padding: 25px;
+	color: white;
 }
