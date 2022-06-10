@@ -32,13 +32,13 @@
     "id": "CS261",
     "name": "Data Structures",
     "color": "rgb(77, 180, 82)",
-    "rating": 80,
+    "rating": 0,
     "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
     "reviews": [
       {
-        "text": "text",
-        "title": "title",
-        "rating": 80
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdfasdfasdf"
       },
       {
         "title": "asdf",
@@ -66,17 +66,23 @@
     "id": "CS325",
     "name": "Analysis of Algorithms",
     "color": "rgb(161, 62, 120)",
-    "rating": 95,
+    "rating": 0,
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
     "reviews": [
       {
-        "text": "text",
-        "title": "title",
-        "rating": 95
+        "title": "this is a test",
+        "rating": "95",
+        "text": "lorem ipsum"
       },
       {
         "title": "asdf",
-        "text": "asdfasdfasdf"
+        "rating": "86",
+        "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdf"
       }
     ]
   }

@@ -62,8 +62,6 @@ function loadServer(title ,text, rating ,course){
   console.log(payloadjson);
   xhr.send(payloadjson);
 }
-
-
 window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton = document.querySelector('#add-review-modal .modal-cancel-button');
   if (modalCancalButton) {
@@ -73,26 +71,26 @@ window.addEventListener('DOMContentLoaded', function () {
   if (modalAcceptButton) {
     modalAcceptButton.addEventListener('click', createreview);
   }
-  fetch(window.location.href+'/data.json').then(response => {
-    return response.json();
-  }).then(data => {
-    // Work with JSON data here
-    var trace = {
-        x: data,
-        type: 'histogram',
-      };
-    var data = [trace];
-    var layout = {
-      title: "Review scores",
-      bargap: 0.05,
+});
+
+fetch(window.location.href+'/data.json').then(response => {
+  return response.json();
+}).then(data => {
+  // Work with JSON data here
+  var trace = {
+      x: data,
+      type: 'histogram',
     };
-    Plotly.newPlot('plot', data, layout, {staticPlot: true});
+  var data = [trace];
+  var layout = {
+    title: "Review scores",
+    bargap: 0.05,
+  };
+  Plotly.newPlot('plot', data, layout, {staticPlot: true});
 
 
 
-    console.log(data);
-  }).catch(err => {
-    // Do something for an error here
-  });
-
+  console.log(data);
+}).catch(err => {
+  // Do something for an error here
 });

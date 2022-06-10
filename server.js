@@ -17,6 +17,7 @@ var data = require('./data.json')
 function update_ratings(argument) {
   // body...
 }
+
 for (let key in data) {
   let sect = data[key];
   //console.log(sect);
@@ -50,7 +51,7 @@ app.get('/', function (req, res) {
   res.status(200).render("classlist", {
     show_navbar: true,
     title: "reviewer",
-    classes: data
+    classes: data,
   });
 })
 
@@ -63,6 +64,7 @@ app.get('/:course', function (req, res, next) {
       color: data[course].color,
       show_navbar: false,
       id: data[course].id,
+      name: data[course].name,
       reviews: data[course].reviews,
       name: data[course].name
     })
