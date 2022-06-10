@@ -1,7 +1,7 @@
 var classesList = Array.from(document.querySelectorAll('.class'))
 
-function insertreview(title, text) {
-  var context = { title: title, text: text };
+function insertreview(title, review, text) {
+  var context = { title: title, review: review, text: text };
   var review = Handlebars.templates.review(context);
   var container = document.getElementsByClassName("review-container");
   container[0].insertAdjacentHTML("beforeend", review);

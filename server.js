@@ -51,6 +51,7 @@ app.get('*', function(req, res){
 })
 
 app.post('/',function(req, res){
+  console.log("post");
   let buffer = "";
   let decoder = new StringDecoder('utf-8');
 
@@ -68,7 +69,6 @@ app.post('/',function(req, res){
       }else{
         console.log("Success");
       }
-
     })
   })
 

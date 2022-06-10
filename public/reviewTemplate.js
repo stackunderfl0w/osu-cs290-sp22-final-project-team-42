@@ -8,10 +8,12 @@ templates['review'] = template({"compiler":[8,">= 4.3.0"],"main":function(contai
         return undefined
     };
 
-  return "<article class=\"review\">\n  <div class=\"review-content\">\n    <p class=\"review-title\">\n      "
+  return "<article class=\"review\">\n  <div class=\"review-content\">\n    <span class=\"review-title\">\n      "
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":4,"column":6},"end":{"line":4,"column":15}}}) : helper)))
-    + "\n    </p>\n    <p class=\"review-text\">\n      "
-    + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":7,"column":6},"end":{"line":7,"column":14}}}) : helper)))
-    + "\n    </p>\n  </div>\n</article>\n";
+    + "\n    </span>\n    <span class=\"review-rating\">\n      Score:"
+    + alias4(((helper = (helper = lookupProperty(helpers,"rating") || (depth0 != null ? lookupProperty(depth0,"rating") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rating","hash":{},"data":data,"loc":{"start":{"line":7,"column":12},"end":{"line":7,"column":22}}}) : helper)))
+    + "\n    </span>\n    <div class=\"review-text\">\n      "
+    + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":10,"column":6},"end":{"line":10,"column":14}}}) : helper)))
+    + "\n    </div>\n  </div>\n</article>\n";
 },"useData":true});
 })();

@@ -199,17 +199,30 @@ a {
 }
 
 .review-content{
-	padding: 1px 10px;
+	padding: 10px;
 }
-.review-author{
+.review-title{
 	font-size: 18px;
 	font-weight: 700;
+	padding: 10px;
+	text-align:center;
+	display: inline-block;
+	width: 80%;
+}
+.review-rating{
+	font-size: 18px;
+	font-weight: 700;
+	float: right;
+	padding: 10px;
+	display: inline-block;
+
+}
+.review-text{
+	font-size: 18px;
+	font-weight: 400;
+	padding: 0 10px 10px 10px;
 }
 
-.review-headline{
-	font-weight: 700;
-	font-size: 18px;
-}
 
 #create-review-button{
 	position: relative;
