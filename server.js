@@ -67,6 +67,7 @@ app.get('/:course', function (req, res, next) {
       show_navbar: false,
       id: data[course].id,
       name: data[course].name,
+      description: data[course].description,
       reviews: data[course].reviews,
       name: data[course].name
     })

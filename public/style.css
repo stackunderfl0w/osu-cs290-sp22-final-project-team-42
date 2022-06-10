@@ -257,6 +257,13 @@ a {
 	padding: 0 10px 10px 10px;
 }
 
+.class-description-text{
+	color: #777;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 0px 20px 0px 20px;
+}
+
 #create-review-button{
 	font-size: 18px;
 	margin: 30px;
