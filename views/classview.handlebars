@@ -8,11 +8,11 @@
   <div class="right-classview">
     <h1 class="classname">Student Reviews</h1>
     <div class="review-container">
+      <button id="create-review-button" onclick="show_modal()" style="background-color: {{color}}">Create Review</button>
       {{#each reviews}}
         {{> review}}
       {{/each}}
     </div>
-    <button id="create-review-button" onclick="show_modal()">Create Review</button>
   </div>
 </div>
 {{> modal}}
