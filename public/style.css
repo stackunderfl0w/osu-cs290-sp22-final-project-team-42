@@ -171,10 +171,10 @@ a {
 	text-align: center;
 }
 .review{
-	border-radius: 10px;
-	background-color: #777;
-	margin: 15px;
-	color: #eee;
+	background-color: white;
+	margin: 30px;
+	color: rgb(36, 36, 36);
+	border: 2px solid #e7e7e7;
 }
 
 .class {
@@ -227,20 +227,21 @@ a {
 
 .review-content{
 	padding: 10px;
+	width: 100%
 }
 .review-title{
 	font-size: 18px;
 	font-weight: 700;
 	padding: 10px;
-	text-align:center;
+	text-align: left;
 	display: inline-block;
-	width: 80%;
 }
 .review-rating{
 	font-size: 18px;
 	font-weight: 700;
 	float: right;
 	padding: 10px;
+	padding-right: 30px;
 	display: inline-block;
 
 }
@@ -250,17 +251,25 @@ a {
 	padding: 0 10px 10px 10px;
 }
 
-
 #create-review-button{
-	background-color: #777;
+	font-size: 18px;
+	margin: 30px;
+	margin-bottom: 0;
+	margin-top: 0;
 	color: white;
-	font-size: 14px;
+	border: none;
+	
+	background-color: black;
 	font-weight: 700;
+	width: 94%;
+	height: 50px;
+}
 
-	width: 100px;
-	height: 75px;
-	margin: 15px;
-	border-radius: 10px;
+#create-review-button:hover {
+	/*font-weight: 700;*/
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	font-size: 20px;
 }
 
 #errpage {
