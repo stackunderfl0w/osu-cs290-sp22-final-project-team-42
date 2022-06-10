@@ -61,7 +61,7 @@ app.get('/:course', function (req, res, next) {
   if (course in data){
     res.status(200).render("classview", {
       show_navbar: false,
-      title: course,
+      id: data[course].id,
       reviews: data[course].reviews,
       name: data[course].name
     })
@@ -70,21 +70,51 @@ app.get('/:course', function (req, res, next) {
   }
 })
 
-app.get('*', function(req, res){
-  res.status(404).render("404");
-})
+app.post('/:course',function(req, res){
+  var course = req.params.course
+  
+  if (req.body && req.body.title && req.body.text) {
+    data[course].reviews.push({
+      title: req.body.title,
+      text: req.body.text
+    })
 
-app.post('/',function(req, res){
+    fs.writeFile(
+      "./data.json",
+      JSON.stringify(data, null, 2),
+      function (err) {
+        if (!err) {
+          res.status(200).send("Success!")
+        } else {
+          res.status(500).send("Error: error saving review")
+        }
+      }
+    )
+  } else {
+    res.status(400).send("Error: request body needs a 'title' and 'text'")
+  }
+
+  app.get('*', function(req, res){
+    res.status(404).render("404");
+  })
+
+
+  /*
+  var course = req.params.course
+
   console.log("post");
   let buffer = "";
   let decoder = new StringDecoder('utf-8');
+
+  let newObject = JSON.parse(buffer);
+  data[course].reviews.push(newObject);
 
   req.on('data', function(data){
     //console.log(data);
     buffer += decoder.write(data);
     //console.log(buffer);
     let newObject = JSON.parse(buffer);
-    data["CS290"].reviews.push(newObject);
+    data[course].reviews.push(newObject);
 
     jstring = JSON.stringify(data);
     fs.writeFile('./data.json', jstring, err=>{
@@ -95,5 +125,5 @@ app.post('/',function(req, res){
       }
     })
   })
-
+  */
 })
