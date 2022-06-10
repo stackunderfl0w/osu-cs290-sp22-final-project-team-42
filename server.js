@@ -17,6 +17,7 @@ var data = require('./data.json')
 function update_ratings(argument) {
   // body...
 }
+
 for (let key in data) {
   let sect = data[key];
   //console.log(sect);
@@ -94,7 +95,7 @@ app.get('/:course/data.json', function (req, res, next) {
 app.post('/:course',function(req, res){
   var course = req.params.course
   
-  if (req.body && req.body.title && req.body.text) {
+  if (req.body && req.body.title && req.body.text && req.body.rating) {
     data[course].reviews.push({
       title: req.body.title,
       rating: req.body.rating,

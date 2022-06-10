@@ -10,6 +10,51 @@
         "title": "asdf",
         "rating": "50",
         "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "90",
+        "text": "asdfasdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "23",
+        "text": "asdfasdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "80",
+        "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdf"
+      },
+      {
+        "title": "asdfasdf",
+        "rating": "50",
+        "text": "asdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "46",
+        "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "66",
+        "text": "asdfasdf"
       }
     ]
   },
@@ -24,6 +69,11 @@
         "title": "asdf",
         "rating": "50",
         "text": "asdfasdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "79",
+        "text": "asdf"
       }
     ]
   },
@@ -31,13 +81,23 @@
     "id": "CS325",
     "name": "Analysis of Algorithms",
     "color": "rgb(161, 62, 120)",
-    "rating": 95,
+    "rating": 0,
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
     "reviews": [
       {
         "title": "this is a test",
         "rating": "95",
         "text": "lorem ipsum"
+      },
+      {
+        "title": "asdf",
+        "rating": "86",
+        "text": "asdfasdf"
+      },
+      {
+        "title": "asdf",
+        "rating": "50",
+        "text": "asdf"
       }
     ]
   }
