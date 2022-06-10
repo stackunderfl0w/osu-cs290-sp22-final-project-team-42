@@ -70,6 +70,25 @@ app.get('/:course', function (req, res, next) {
     next()
   }
 })
+app.get('/:course/data.json', function (req, res, next) {
+
+  var course = req.params.course
+
+  if (course in data){
+    const reviews = [];
+    for (let rev in data[course]["reviews"]) {
+      let review=data[course]["reviews"][rev]
+      if(review.rating){
+        reviews.push(review.rating)
+      }
+    }
+    res.setHeader("Content-Type", "application/json");
+    res.status(200).send(reviews)
+
+  } else {
+    next()
+  }
+})
 
 app.post('/:course',function(req, res){
   var course = req.params.course
@@ -98,33 +117,4 @@ app.post('/:course',function(req, res){
   app.get('*', function(req, res){
     res.status(404).render("404");
   })
-
-
-  /*
-  var course = req.params.course
-
-  console.log("post");
-  let buffer = "";
-  let decoder = new StringDecoder('utf-8');
-
-  let newObject = JSON.parse(buffer);
-  data[course].reviews.push(newObject);
-
-  req.on('data', function(data){
-    //console.log(data);
-    buffer += decoder.write(data);
-    //console.log(buffer);
-    let newObject = JSON.parse(buffer);
-    data[course].reviews.push(newObject);
-
-    jstring = JSON.stringify(data);
-    fs.writeFile('./data.json', jstring, err=>{
-      if(err){
-        console.log(err);
-      }else{
-        console.log("Success");
-      }
-    })
-  })
-  */
 })

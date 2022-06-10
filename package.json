@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "handlebars views/partials/review.handlebars -f public/reviewTemplate.js",
-    "build": "handlebars views/partials/class.handlebars -f public/classTemplate.js",
     "prestart": "npm run build",
     "start": "node server.js"
   },
