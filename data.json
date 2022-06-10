@@ -20,6 +20,11 @@
         "title": "I love this class",
         "text": "Rob Hess is the best!",
         "rating": "97"
+      },
+      {
+        "title": "HTML is totally different",
+        "text": "It was a bit of a learning curve to  get my head wrapped around HTML and CSS and javascript but once I did i was definitely into it!",
+        "rating": "80"
       }
     ]
   },
@@ -56,7 +61,7 @@
     "id": "CS325",
     "name": "Analysis of Algorithms",
     "color": "rgb(161, 62, 120)",
-    "rating": 50,
+    "rating": 67,
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
     "reviews": [
       {
