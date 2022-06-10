@@ -119,8 +119,8 @@ app.post('/:course',function(req, res){
   } else {
     res.status(400).send("Error: request body needs a 'title' and 'text'")
   }
+})
 
-  app.get('*', function(req, res){
-    res.status(404).render("404");
-  })
+app.get('*', function(req, res){
+  res.status(404).render("404");
 })

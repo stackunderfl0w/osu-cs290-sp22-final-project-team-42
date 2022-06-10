@@ -286,9 +286,16 @@ a {
 }
 
 #errpage {
-	padding: 25px;
-	color: white;
+	text-align: center;
+	padding: 0;
+	color: black;
 }
+
+#errpage-h1 {
+	font-weight: 100;
+	font-size: 100px;
+}
+
 #modal-backdrop {
   position: fixed;
   top: 0;
