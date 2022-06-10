@@ -3,7 +3,7 @@
     "id": "CS290",
     "name": "Web Development",
     "color": "rgb(233, 64, 64)",
-    "rating": 94,
+    "rating": 57.1,
     "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
     "reviews": [
       {
@@ -27,7 +27,7 @@
     "id": "CS261",
     "name": "Data Structures",
     "color": "rgb(77, 180, 82)",
-    "rating": 73,
+    "rating": 60,
     "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
     "reviews": [
       {
@@ -44,6 +44,11 @@
         "title": "DATA!!!!",
         "text": "This is a great class! I loved learning about trees!",
         "rating": "100"
+      },
+      {
+        "title": "123",
+        "text": "123",
+        "rating": 21
       }
     ]
   },
@@ -51,7 +56,7 @@
     "id": "CS325",
     "name": "Analysis of Algorithms",
     "color": "rgb(161, 62, 120)",
-    "rating": 0,
+    "rating": 50,
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
     "reviews": [
       {

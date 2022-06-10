@@ -23,9 +23,9 @@ function hide_modal() {
 
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
-  var review_rating = document.getElementById("review-score-input").value
+  var review_rating = document.getElementById("rating").value
   var review_title = document.getElementById("review-title-input").value
-  var course = document.getElementById("name").textContent
+  var course = document.getElementById("id").textContent
 
   review_score = parseInt(review_rating)
 
