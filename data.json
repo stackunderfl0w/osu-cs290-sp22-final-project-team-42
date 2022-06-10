@@ -8,12 +8,12 @@
         "reviews": [
             {
                 "text": "text",
-                "author": "author",
+                "title": "title",
                 "rating": 100
             },
             {
                 "text": "text",
-                "author": "author",
+                "title": "title",
                 "rating": 90
             }
         ]
@@ -27,7 +27,7 @@
         "reviews": [
             {
                 "text": "text",
-                "author": "author",
+                "title": "title",
                 "rating": 80
             }
         ]
@@ -41,7 +41,7 @@
         "reviews": [
             {
                 "text": "text",
-                "author": "author",
+                "title": "title",
                 "rating": 95
             }
         ]

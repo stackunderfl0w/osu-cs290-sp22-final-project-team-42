@@ -1,53 +1,47 @@
 var classesList = Array.from(document.querySelectorAll('.class'))
 
-function insertreview(author, text) {
-  var context = { author: author, text: text };
+function insertreview(title, text) {
+  var context = { title: title, text: text };
   var review = Handlebars.templates.review(context);
   var container = document.getElementsByClassName("review-container");
   container[0].insertAdjacentHTML("beforeend", review);
 }
+function show_modal() {
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createTwitModal = document.getElementById('add-review-modal');
 
+  modalBackdrop.classList.remove('hidden');
+  createTwitModal.classList.remove('hidden');
+}
+function hide_modal() {
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var createTwitModal = document.getElementById('add-review-modal');
 
-window.addEventListener('DOMContentLoaded', function () {
-
-});
-
-function createreview(){
-
-  var review_text = document.getElementById("review-text").value
-  var review_author = document.getElementById("review-author").value
-
-  if(review_text == "" || review_author == ""){
-    alert("please dont leave a text field empty")
-  }else{
-    insertreview(review_author, review_text)
-    document.getElementById("review-text").value = ""
-    document.getElementById("review-author").value = ""
-
-    loadServer(review_author, review_text)
-
-    //const newReview = {
-      //title: "The title of the review",
-      //text: "Text to be formatted into a review the same way we did in assignment 5."
-    //};
-
-
-    //const jsonString = JSON.stringify(newReview);
-
-    //fs.writeFile('./reviewData.json', jsonString , err => {
-    //   if(err){
-      //   console.log("Error");
-      // } else {
-        //  console.log("Success");
-      // }
-    //});
-  }
-
+  modalBackdrop.classList.add('hidden');
+  createTwitModal.classList.add('hidden');
+  document.getElementById("review-text-input").value = ""
+  document.getElementById("review-title-input").value = ""
 }
 
-function loadServer(author ,text, ){
+function createreview(){
+  var review_text = document.getElementById("review-text-input").value
+  var review_title = document.getElementById("review-title-input").value
+
+  if(review_text == "" || review_title == ""){
+    alert("please dont leave a text field empty")
+  }else{
+    insertreview(review_title, review_text)
+    document.getElementById("review-text-input").value = ""
+    document.getElementById("review-title-input").value = ""
+
+    loadServer(review_title, review_text)
+    hide_modal()
+  }
+}
+
+function loadServer(title ,text, ){
   console.log("TEST")
-  payload = { author : author,
+  payload = { title : title,
               text : text };
 
   let xhr = new XMLHttpRequest();
@@ -76,6 +70,21 @@ function searchClasses() {
       }
   }
 }
-
-document.getElementById('navbar-search-button').addEventListener('click', searchClasses)
-document.getElementById('navbar-search-input').addEventListener('input', searchClasses)
+window.addEventListener('DOMContentLoaded', function () {
+  var searchButton = document.getElementById('navbar-search-button');
+  if (searchButton) {
+    searchButton.addEventListener('click', searchClasses);
+  }
+  var searchInput = document.getElementById('navbar-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', searchClasses);
+  }
+  var modalCancalButton = document.querySelector('#add-review-modal .modal-cancel-button');
+  if (modalCancalButton) {
+    modalCancalButton.addEventListener('click', hide_modal);
+  }
+  var modalAcceptButton = document.querySelector('#add-review-modal .modal-accept-button');
+  if (modalAcceptButton) {
+    modalAcceptButton.addEventListener('click', createreview);
+  }
+});
