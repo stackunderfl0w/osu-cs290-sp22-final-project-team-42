@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var slider = document.getElementById("rating")
   if (slider) {
     slider.addEventListener('input', function() {
-      console.log("slider changed")
+      console.log(slider.value)
       var review_rating = slider.value
       document.getElementById("rating-label").innerHTML = "Overall: " + review_rating + "%"
     });

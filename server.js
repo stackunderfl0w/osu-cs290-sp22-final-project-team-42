@@ -18,28 +18,6 @@ function update_ratings(argument) {
   // body...
 }
 
-for (let key in data) {
-  let sect = data[key];
-  //console.log(sect);
-  total=0
-  count=0
-  for (let rev in sect["reviews"]) {
-    let review=sect["reviews"][rev]
-    if(!isNaN(review.rating)){
-      if(review.rating>=0 && review.rating<=100){
-        total+=review.rating
-        count++
-      }
-    }
-  }
-  if(count>0){
-      sect["rating"]=total/count
-  }
-  else{
-    sect["rating"]=0
-  }
-}
-
 const StringDecoder = require('string_decoder').StringDecoder
 const { nextTick } = require('process')
 
@@ -48,6 +26,31 @@ app.listen(port, function () {
 })
 
 app.get('/', function (req, res) {
+  for (let key in data) {
+    let sect = data[key];
+    //console.log(sect);
+    total=0
+    count=0
+    for (let rev in sect["reviews"]) {
+      let review=sect["reviews"][rev]
+
+      var rating = parseInt(review.rating)
+
+      if(!isNaN(rating)){
+        if(rating>=0 && rating<=100){
+          total+=rating
+          count++
+        }
+      }
+    }
+    if(count>0){
+        sect["rating"]=parseInt(total/count)
+    }
+    else{
+      sect["rating"]=0
+    }
+  }
+
   res.status(200).render("classlist", {
     show_navbar: true,
     title: "reviewer",
@@ -56,7 +59,6 @@ app.get('/', function (req, res) {
 })
 
 app.get('/:course', function (req, res, next) {
-
   var course = req.params.course
 
   if (course in data){
@@ -94,12 +96,12 @@ app.get('/:course/data.json', function (req, res, next) {
 
 app.post('/:course',function(req, res){
   var course = req.params.course
-  
-  if (req.body && req.body.title && req.body.text && req.body.rating) {
+
+   if (req.body && req.body.title && req.body.text && req.body.rating) {
     data[course].reviews.push({
       title: req.body.title,
-      rating: req.body.rating,
-      text: req.body.text
+      text: req.body.text,
+      rating: req.body.rating
     })
 
     fs.writeFile(

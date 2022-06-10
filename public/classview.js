@@ -28,8 +28,6 @@ function createreview(){
 
   review_score = parseInt(review_rating)
 
-  console.log(course)
-
   if(review_text == "" || review_title == ""){
     alert("Please dont leave a field empty!")
   }else{
