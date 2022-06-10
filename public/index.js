@@ -1,8 +1,5 @@
 var classesList = Array.from(document.querySelectorAll('.class'))
 
-
-<<<<<<< Updated upstream
-=======
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
   var review_rating = "100"
@@ -36,8 +33,6 @@ function loadServer(title ,text, course){
   console.log(payloadjson);
   xhr.send(payloadjson);
 }
->>>>>>> Stashed changes
-
 
 function searchClasses() {
   //get the search bar input
@@ -58,10 +53,6 @@ function searchClasses() {
 
 
 window.addEventListener('DOMContentLoaded', function () {
-<<<<<<< Updated upstream
-
-});
-=======
   var searchButton = document.getElementById('navbar-search-button');
   if (searchButton) {
     searchButton.addEventListener('click', searchClasses);
@@ -79,4 +70,3 @@ window.addEventListener('DOMContentLoaded', function () {
     modalAcceptButton.addEventListener('click', createreview);
   }
 });
->>>>>>> Stashed changes
