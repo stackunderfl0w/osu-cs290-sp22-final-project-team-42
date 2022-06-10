@@ -2,37 +2,47 @@
     "CS290": {
         "id": "CS290",
         "name": "Web Development",
+        "color": "rgb(233, 64, 64)",
+        "rating": 95,
         "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
         "reviews": [
             {
                 "text": "text",
-                "author": "author"
+                "author": "author",
+                "rating": 100
             },
             {
                 "text": "text",
-                "author": "author"
+                "author": "author",
+                "rating": 90
             }
         ]
     },
     "CS261": {
         "id": "CS261",
         "name": "Data Structures",
+        "color": "rgb(77, 180, 82)",
+        "rating": 90,
         "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
         "reviews": [
             {
                 "text": "text",
-                "author": "author"
+                "author": "author",
+                "rating": 80
             }
         ]
     },
     "CS325": {
         "id": "CS325",
         "name": "Analysis of Algorithms",
+        "color": "rgb(161, 62, 120)",
+        "rating": 90,
         "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
         "reviews": [
             {
                 "text": "text",
-                "author": "author"
+                "author": "author",
+                "rating": 95
             }
         ]
     }

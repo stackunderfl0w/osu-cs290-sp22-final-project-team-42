@@ -1,3 +1,5 @@
+var classesList = Array.from(document.querySelectorAll('.class'))
+
 function insertreview(author, text) {
   var context = { author: author, text: text };
   var review = Handlebars.templates.review(context);
@@ -56,3 +58,24 @@ function loadServer(author ,text, ){
   console.log(payloadjson);
   xhr.send(payloadjson);
 }
+
+
+function searchClasses() {
+  //get the search bar input
+  var keyWords = document.getElementById('navbar-search-input').value.toLowerCase()
+
+  //delete all the twits from the DOM
+  while (document.querySelector('.class-container').lastChild) {
+      document.querySelector('.class-container').removeChild(document.querySelector('.class-container').lastChild)
+  }
+
+  //only show the twits from the twit array that contain the search bar input
+  for (var course of classesList) {
+      if (course.textContent.toLowerCase().includes(keyWords)) {
+          document.querySelector('.class-container').appendChild(course)
+      }
+  }
+}
+
+document.getElementById('navbar-search-button').addEventListener('click', searchClasses)
+document.getElementById('navbar-search-input').addEventListener('input', searchClasses)

@@ -1,13 +1,14 @@
-<article class="review">
-  <div class="review-content">
-    <p class="review-title">
-      {{id}}
-    </p>
-    <p class="review-headline">
-      {{name}}
-    </p>
-    <p class="review-text">
-      {{description}}
-    </p>
-  </div>
-</article>
+<a href="http://localhost:3000/{{id}}">
+    <article class="class" style="border-left: 10px solid {{color}}">
+            <p class="class-title">
+                {{id}}: {{name}}
+            </p>
+            <br/>
+            <p class="class-content">
+                {{description}}
+            </p>
+            <p class="class-rating" style="color: #777">
+                {{rating}}%
+            </p>
+    </article>
+</a>
