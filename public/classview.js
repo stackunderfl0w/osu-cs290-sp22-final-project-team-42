@@ -21,36 +21,7 @@ function hide_modal() {
   document.getElementById("review-title-input").value = ""
 }
 
-function createreview(){
-  var review_text = document.getElementById("review-text-input").value
-  var review_rating = "100"
-  var review_title = document.getElementById("review-title-input").value
 
-  if(review_text == "" || review_title == ""){
-    alert("please dont leave a text field empty")
-  }else{
-    insertreview(review_title, review_rating, review_text)
-    document.getElementById("review-text-input").value = ""
-    document.getElementById("review-title-input").value = ""
-
-    loadServer(review_title, review_text)
-    hide_modal()
-  }
-}
-
-function loadServer(title ,text, ){
-  console.log("TEST")
-  payload = { title : title,
-              text : text };
-
-  let xhr = new XMLHttpRequest();
-  xhr.open('POST','/');
-  xhr.setRequestHeader('Content-Type','application/json');
-  console.log(payload);
-  payloadjson = JSON.stringify(payload);
-  console.log(payloadjson);
-  xhr.send(payloadjson);
-}
 window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton = document.querySelector('#add-review-modal .modal-cancel-button');
   if (modalCancalButton) {

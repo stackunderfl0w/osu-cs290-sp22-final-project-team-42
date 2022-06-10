@@ -21,7 +21,6 @@ function createreview(){
 }
 
 function loadServer(title ,text, course){
-  console.log("TEST")
   payload = { title : title,
               text : text };
 

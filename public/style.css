@@ -66,6 +66,11 @@ a {
 
 .classname{
 	color: rgb(83, 83, 83);
+	margin: 0;
+	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 20px;
 }
 
 .class-view{
@@ -124,7 +129,6 @@ a {
 #header {
 	width: 100%;
 	background-color: black;
-	/*margin-top: -50px;*/
 }
 
 .modal-cancel-button {
@@ -152,22 +156,16 @@ a {
 }
 
 .left-classview{
-	border-radius: 10px;
-	background-color: rgb(255, 255, 255);
-	margin: 20px;
-	display: inline-block;
-	width: 33%;
-	border: 2px solid #bebebe;
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+	background-color: white;
+	margin: 50px;
+	width: 20%;
+	margin-right: 25px;
 }
 .right-classview{
-	border-radius: 10px;
-	background-color: rgb(255, 255, 255);
-	margin: 20px;
-	border: 2px solid #bebebe;
-	display: inline-block;
-	width: 100%;
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+	background-color: white;
+	margin: 50px;
+	width: 70%;
+	margin-left: 25px;
 }
 .classname{
 	text-align: center;

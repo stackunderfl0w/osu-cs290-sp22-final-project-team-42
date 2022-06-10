@@ -60,6 +60,7 @@ app.get('/:course', function (req, res, next) {
 
   if (course in data){
     res.status(200).render("classview", {
+      color: data[course].color,
       show_navbar: false,
       id: data[course].id,
       reviews: data[course].reviews,

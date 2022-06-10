@@ -22,6 +22,6 @@ templates['class'] = template({"compiler":[8,">= 4.3.0"],"main":function(contain
     + alias4(((helper = (helper = lookupProperty(helpers,"rating") || (depth0 != null ? lookupProperty(depth0,"rating") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rating","hash":{},"data":data,"loc":{"start":{"line":11,"column":32},"end":{"line":11,"column":42}}}) : helper)))
     + "% from "
     + alias4(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"reviews") : depth0)) != null ? lookupProperty(stack1,"length") : stack1), depth0))
-    + " reviews\n            </p>\n    </article>\n</a>\n";
+    + " review(s)\n            </p>\n    </article>\n</a>";
 },"useData":true});
 })();
