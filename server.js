@@ -14,6 +14,30 @@ app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 var data = require('./data.json')
+function update_ratings(argument) {
+  // body...
+}
+for (let key in data) {
+  let sect = data[key];
+  //console.log(sect);
+  total=0
+  count=0
+  for (let rev in sect["reviews"]) {
+    let review=sect["reviews"][rev]
+    if(!isNaN(review.rating)){
+      if(review.rating>=0 && review.rating<=100){
+        total+=review.rating
+        count++
+      }
+    }
+  }
+  if(count>0){
+      sect["rating"]=total/count
+  }
+  else{
+    sect["rating"]=0
+  }
+}
 
 const StringDecoder = require('string_decoder').StringDecoder
 const { nextTick } = require('process')
