@@ -3,7 +3,7 @@
     "id": "CS290",
     "name": "Web Development",
     "color": "rgb(233, 64, 64)",
-    "rating": 95,
+    "rating": 94,
     "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
     "reviews": [
       {
@@ -15,6 +15,11 @@
         "title": "Websites are cool",
         "text": "I loved making websites! And the server side stuff was cool too",
         "rating": "90"
+      },
+      {
+        "title": "I love this class",
+        "text": "Rob Hess is the best!",
+        "rating": "97"
       }
     ]
   },
@@ -22,9 +27,25 @@
     "id": "CS261",
     "name": "Data Structures",
     "color": "rgb(77, 180, 82)",
-    "rating": 0,
+    "rating": 73,
     "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
-    "reviews": []
+    "reviews": [
+      {
+        "title": "Boring!",
+        "text": "I fell asleep every lecture!",
+        "rating": "29"
+      },
+      {
+        "title": "Exams are hard",
+        "text": "The exams are hard, but the class and assignments are fun!",
+        "rating": "90"
+      },
+      {
+        "title": "DATA!!!!",
+        "text": "This is a great class! I loved learning about trees!",
+        "rating": "100"
+      }
+    ]
   },
   "CS325": {
     "id": "CS325",
@@ -32,6 +53,12 @@
     "color": "rgb(161, 62, 120)",
     "rating": 0,
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
-    "reviews": []
+    "reviews": [
+      {
+        "title": "Not sure",
+        "text": "I haven't taken the class yet so I'm not sure",
+        "rating": "50"
+      }
+    ]
   }
 }
