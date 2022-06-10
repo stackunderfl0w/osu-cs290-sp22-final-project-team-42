@@ -23,27 +23,36 @@ function hide_modal() {
 
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
-  var review_rating = "100"
+  var review_rating = document.getElementById("review-score-input").value
   var review_title = document.getElementById("review-title-input").value
   var course = document.getElementById("name").textContent
 
+  review_score = parseInt(review_rating)
+
   console.log(course)
 
-  if(review_text == "" || review_title == ""){
-    alert("please dont leave a text field empty")
+  if(review_text == "" || review_title == "" || review_rating == ""){
+    alert("please dont leave a field empty")
+  }else if(isNaN(review_score)){
+    alert("please enter a valid number")
+  }else if(review_score > 100 || review_score < 0) {
+    alert("please enter a number between 0 and a 100")
   }else{
-    insertreview(review_title, review_rating, review_text)
+
+    insertreview(review_title, review_score, review_text)
     document.getElementById("review-text-input").value = ""
     document.getElementById("review-title-input").value = ""
 
-    loadServer(review_title, review_text, course)
+    loadServer(review_title, review_text, review_score, course)
     hide_modal()
   }
 }
 
-function loadServer(title ,text, course){
+function loadServer(title ,text, rating ,course){
   payload = { title : title,
-              text : text };
+              text : text,
+              rating: rating
+            };
 
   let xhr = new XMLHttpRequest();
   xhr.open('POST','/' + course);
@@ -73,9 +82,9 @@ window.addEventListener('DOMContentLoaded', function () {
         type: 'histogram',
       };
     var data = [trace];
-    var layout = { 
-      title: "Review scores", 
-      bargap: 0.05, 
+    var layout = {
+      title: "Review scores",
+      bargap: 0.05,
     };
     Plotly.newPlot('plot', data, layout, {staticPlot: true});
 

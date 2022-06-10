@@ -3,7 +3,7 @@
     "id": "CS290",
     "name": "Web Development",
     "color": "rgb(233, 64, 64)",
-    "rating": 95,
+    "rating": 75,
     "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
     "reviews": [
       {
@@ -12,21 +12,19 @@
         "rating": 100
       },
       {
-        "text": "text",
-        "title": "title",
-        "rating": 90
+        "title": "n",
+        "text": "n",
+        "rating": 50
       },
       {
-        "title": "asdf",
-        "text": "asdfasdf"
+        "title": "new title",
+        "text": "new reveiw",
+        "rating": 100
       },
       {
-        "title": "asdf",
-        "text": "asdfasdfasdf"
-      },
-      {
-        "title": "asdf",
-        "text": "asdfasdf"
+        "title": "r",
+        "text": "r",
+        "rating": 50
       }
     ]
   },
@@ -53,6 +51,14 @@
       {
         "title": "jkhkj",
         "text": "khgdjtysdjhgk"
+      },
+      {
+        "title": "my review",
+        "text": "review text"
+      },
+      {
+        "title": "wawiowe",
+        "text": "jkfajfe"
       }
     ]
   },
