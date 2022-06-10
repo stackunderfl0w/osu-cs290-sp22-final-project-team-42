@@ -26,10 +26,14 @@ function createreview(){
   var review_rating = document.getElementById("rating").value
   var review_title = document.getElementById("review-title-input").value
 
+  review_score = parseInt(review_rating)
+
+  console.log(course)
+
   if(review_text == "" || review_title == ""){
-    alert("please dont leave a text field empty")
+    alert("Please dont leave a field empty!")
   }else{
-    insertreview(review_title, review_rating, review_text)
+    insertreview(review_title, review_score, review_text)
     document.getElementById("review-text-input").value = ""
     document.getElementById("review-title-input").value = ""
 
