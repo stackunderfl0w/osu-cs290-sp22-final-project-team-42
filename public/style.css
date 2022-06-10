@@ -78,11 +78,16 @@ a {
 	vertical-align: top;
 }
 
+.navbar-div {
+	background-color: black;
+	display: flex;
+}
+
 #navbar-search-input {
 	background-color: black;
 	border-radius: 0px 10px 10px 0px;
 	height: 28px;
-	width: 600px;
+	width: 400px;
 	font-size: 24px;
 	color: white;
 	border: none;
@@ -117,8 +122,8 @@ a {
 }
 
 #header {
-	position: fixed;
 	width: 100%;
+	background-color: black;
 	/*margin-top: -50px;*/
 }
 
