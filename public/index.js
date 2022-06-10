@@ -1,7 +1,7 @@
 var classesList = Array.from(document.querySelectorAll('.class'))
 
-function insertreview(title, review, text) {
-  var context = { title: title, review: review, text: text };
+function insertreview(title, rating, text) {
+  var context = { title: title, rating: rating, text: text };
   var review = Handlebars.templates.review(context);
   var container = document.getElementsByClassName("review-container");
   container[0].insertAdjacentHTML("beforeend", review);
@@ -25,12 +25,13 @@ function hide_modal() {
 
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
+  var review_rating = "100"
   var review_title = document.getElementById("review-title-input").value
 
   if(review_text == "" || review_title == ""){
     alert("please dont leave a text field empty")
   }else{
-    insertreview(review_title, review_text)
+    insertreview(review_title, review_rating, review_text)
     document.getElementById("review-text-input").value = ""
     document.getElementById("review-title-input").value = ""
 
