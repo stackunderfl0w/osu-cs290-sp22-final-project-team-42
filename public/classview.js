@@ -23,11 +23,8 @@ function hide_modal() {
 
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
-  var review_rating = "100"
+  var review_rating = document.getElementById("rating").value
   var review_title = document.getElementById("review-title-input").value
-  var course = document.getElementById("name").textContent
-
-  console.log(course)
 
   if(review_text == "" || review_title == ""){
     alert("please dont leave a text field empty")
@@ -36,13 +33,16 @@ function createreview(){
     document.getElementById("review-text-input").value = ""
     document.getElementById("review-title-input").value = ""
 
-    loadServer(review_title, review_text, course)
+    loadServer(review_title, review_text, review_rating)
     hide_modal()
   }
 }
 
-function loadServer(title ,text, course){
+function loadServer(title, text, rating){
+  var course = document.getElementById("id").textContent
+
   payload = { title : title,
+              rating : rating,
               text : text };
 
   let xhr = new XMLHttpRequest();
@@ -53,8 +53,6 @@ function loadServer(title ,text, course){
   console.log(payloadjson);
   xhr.send(payloadjson);
 }
-
-
 window.addEventListener('DOMContentLoaded', function () {
   var modalCancalButton = document.querySelector('#add-review-modal .modal-cancel-button');
   if (modalCancalButton) {
@@ -64,26 +62,26 @@ window.addEventListener('DOMContentLoaded', function () {
   if (modalAcceptButton) {
     modalAcceptButton.addEventListener('click', createreview);
   }
-  fetch(window.location.href+'/data.json').then(response => {
-    return response.json();
-  }).then(data => {
-    // Work with JSON data here
-    var trace = {
-        x: data,
-        type: 'histogram',
-      };
-    var data = [trace];
-    var layout = { 
-      title: "Review scores", 
-      bargap: 0.05, 
+});
+
+fetch(window.location.href+'/data.json').then(response => {
+  return response.json();
+}).then(data => {
+  // Work with JSON data here
+  var trace = {
+      x: data,
+      type: 'histogram',
     };
-    Plotly.newPlot('plot', data, layout, {staticPlot: true});
+  var data = [trace];
+  var layout = { 
+    title: "Review scores", 
+    bargap: 0.05, 
+  };
+  Plotly.newPlot('plot', data, layout, {staticPlot: true});
 
 
 
-    console.log(data);
-  }).catch(err => {
-    // Do something for an error here
-  });
-
+  console.log(data);
+}).catch(err => {
+  // Do something for an error here
 });

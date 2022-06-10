@@ -17,7 +17,6 @@ function searchClasses() {
   }
 }
 
-
 window.addEventListener('DOMContentLoaded', function () {
   var searchButton = document.getElementById('navbar-search-button');
   if (searchButton) {
@@ -26,5 +25,14 @@ window.addEventListener('DOMContentLoaded', function () {
   var searchInput = document.getElementById('navbar-search-input');
   if (searchInput) {
     searchInput.addEventListener('input', searchClasses);
+  }
+
+  var slider = document.getElementById("rating")
+  if (slider) {
+    slider.addEventListener('input', function() {
+      console.log("slider changed")
+      var review_rating = slider.value
+      document.getElementById("rating-label").innerHTML = "Overall: " + review_rating + "%"
+    });
   }
 });

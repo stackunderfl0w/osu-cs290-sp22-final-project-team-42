@@ -3,29 +3,12 @@
     "id": "CS290",
     "name": "Web Development",
     "color": "rgb(233, 64, 64)",
-    "rating": 95,
+    "rating": 0,
     "description": "How to design and implement a multi-tier application using web technologies: Creation of extensive custom client- and server-side code, consistent with achieving a high-quality software architecture.",
     "reviews": [
       {
-        "text": "text",
-        "title": "title",
-        "rating": 100
-      },
-      {
-        "text": "text",
-        "title": "title",
-        "rating": 90
-      },
-      {
         "title": "asdf",
-        "text": "asdfasdf"
-      },
-      {
-        "title": "asdf",
-        "text": "asdfasdfasdf"
-      },
-      {
-        "title": "asdf",
+        "rating": "50",
         "text": "asdfasdf"
       }
     ]
@@ -34,25 +17,13 @@
     "id": "CS261",
     "name": "Data Structures",
     "color": "rgb(77, 180, 82)",
-    "rating": 80,
+    "rating": 0,
     "description": "Abstract data types, dynamic arrays, linked lists, trees and graphs, binary search trees, hash tables, storage management, complexity analysis of data structures.",
     "reviews": [
       {
-        "text": "text",
-        "title": "title",
-        "rating": 80
-      },
-      {
         "title": "asdf",
-        "text": "asdfasdf"
-      },
-      {
-        "title": "hjgf",
-        "text": "jgfdkhgdfhgf"
-      },
-      {
-        "title": "jkhkj",
-        "text": "khgdjtysdjhgk"
+        "rating": "50",
+        "text": "asdfasdfasdf"
       }
     ]
   },
@@ -64,13 +35,9 @@
     "description": "Recurrence relations, combinatorics, recursive algorithms, proofs of correctness.",
     "reviews": [
       {
-        "text": "text",
-        "title": "title",
-        "rating": 95
-      },
-      {
-        "title": "asdf",
-        "text": "asdfasdfasdf"
+        "title": "this is a test",
+        "rating": "95",
+        "text": "lorem ipsum"
       }
     ]
   }

@@ -50,7 +50,7 @@ app.get('/', function (req, res) {
   res.status(200).render("classlist", {
     show_navbar: true,
     title: "reviewer",
-    classes: data
+    classes: data,
   });
 })
 
@@ -63,6 +63,7 @@ app.get('/:course', function (req, res, next) {
       color: data[course].color,
       show_navbar: false,
       id: data[course].id,
+      name: data[course].name,
       reviews: data[course].reviews,
       name: data[course].name
     })
@@ -96,6 +97,7 @@ app.post('/:course',function(req, res){
   if (req.body && req.body.title && req.body.text) {
     data[course].reviews.push({
       title: req.body.title,
+      rating: req.body.rating,
       text: req.body.text
     })
 
