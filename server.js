@@ -105,6 +105,21 @@ app.post('/:course',function(req, res){
       rating: req.body.rating
     })
 
+
+   var total_rating = 0
+   var no_of_ratings = 0
+
+   for (let i = 0; i < data[course].reviews.length; i++) {
+     total_rating = total_rating + (data[course].reviews[i].rating)
+     no_of_ratings = no_of_ratings + 1
+     console.log(total_rating)
+   }
+
+   var new_average = total_rating/no_of_ratings
+
+
+   data[course].rating = new_average
+
     fs.writeFile(
       "./data.json",
       JSON.stringify(data, null, 2),

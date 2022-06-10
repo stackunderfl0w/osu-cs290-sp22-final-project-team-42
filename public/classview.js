@@ -23,8 +23,9 @@ function hide_modal() {
 
 function createreview(){
   var review_text = document.getElementById("review-text-input").value
-  var review_rating = document.getElementById("rating").value
+  var review_rating = document.getElementById("review-score-input").value
   var review_title = document.getElementById("review-title-input").value
+  var course = document.getElementById("name").textContent
 
   review_score = parseInt(review_rating)
 
@@ -35,17 +36,16 @@ function createreview(){
     document.getElementById("review-text-input").value = ""
     document.getElementById("review-title-input").value = ""
 
-    loadServer(review_title, review_text, review_rating)
+    loadServer(review_title, review_text, review_score, course)
     hide_modal()
   }
 }
 
-function loadServer(title, text, rating){
-  var course = document.getElementById("id").textContent
-
+function loadServer(title ,text, rating ,course){
   payload = { title : title,
-              rating : rating,
-              text : text };
+              text : text,
+              rating: rating
+            };
 
   let xhr = new XMLHttpRequest();
   xhr.open('POST','/' + course);
@@ -75,9 +75,9 @@ fetch(window.location.href+'/data.json').then(response => {
       type: 'histogram',
     };
   var data = [trace];
-  var layout = { 
-    title: "Review scores", 
-    bargap: 0.05, 
+  var layout = {
+    title: "Review scores",
+    bargap: 0.05,
   };
   Plotly.newPlot('plot', data, layout, {staticPlot: true});
 
